@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.juiceybeans.leaf_me_be.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "leaf_me_be.refmap.json",
+  "mixins": [
+    "GrowingPlantBlockMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

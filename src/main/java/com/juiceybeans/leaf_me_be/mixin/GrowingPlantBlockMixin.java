@@ -17,8 +17,7 @@ public abstract class GrowingPlantBlockMixin {
             method = "canSurvive",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/world/level/block/state/BlockState;isFaceSturdy(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Z"
-            )
+                    target = "Lnet/minecraft/world/level/block/state/BlockState;isFaceSturdy(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Z")
     )
     private boolean leaf_me_be$cave_vine_placement(BlockState instance, BlockGetter blockGetter, BlockPos pos, Direction direction, Operation<Boolean> original) {
         return original.call(instance, blockGetter, pos, direction) || blockGetter.getBlockState(pos.above()).is(ModTags.SUPPORTS_CAVE_VINES);
